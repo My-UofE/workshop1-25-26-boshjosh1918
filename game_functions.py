@@ -16,7 +16,8 @@ def check_higher_lower(current_val, next_val, user_input):
 def process_guess(letter, board, word):
     if letter not in word:
         print(f"Sorry, '{letter}' is not in the word")
-        return
+        return False
     for i,char in enumerate(word):
         if char == letter: board[i] = letter
     print(f"Well done! '{letter}' is in the word")
+    return True
